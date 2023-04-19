@@ -6,7 +6,7 @@ import { Rating } from "./Rating";
 export const ProductCard = ({product}) => {
   const { cartList, addToCart, removeFromCart } = useCart();
   const [inCart, setInCart] = useState(false);
-  const { id, name, overview, price, poster, best_seller, rating, in_stock } = product;
+  const { id, name, overview, price, poster, best_seller, rating } = product;
   
   useEffect(() => {
   const productInCart = cartList.find(item => item.id === product.id)
